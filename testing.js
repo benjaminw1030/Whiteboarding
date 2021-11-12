@@ -32,4 +32,12 @@ const dedupe = (arr) => {
   }
   return newArr;
 }
-console.log(dedupe([1, 2, 3, 2, 4, 5, 5, 6, 1]))
+console.log(dedupe([1, 2, 3, 2, 4, 5, 5, 6, 1]));
+
+const dedupeFilter = (arr) => {
+  const newArr = arr.filter((e, index) => {
+    return arr.indexOf(e) === index;
+  })
+  return newArr;
+}
+console.log(dedupeFilter([1, 2, 3, 2, 4, 5, 5, 6, 1]));
