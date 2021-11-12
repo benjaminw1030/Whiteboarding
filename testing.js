@@ -89,3 +89,16 @@
 //   }
 // }
 // console.log(compressionRecursive("aaaabbbbcdefaccc"));
+
+// const uniqueString = (str) => {
+//   lcString = str.toLowerCase();
+//   for (i = 0; i < str.length; i++) {
+//     checkStr = str.substring(0, i) + str.substring((i + 1), str.length);
+//     if (checkStr.includes(lcString.charAt(i))) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+// console.log(uniqueString("hello"));
+// console.log(uniqueString("whiteboard"));

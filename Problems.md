@@ -134,6 +134,19 @@ Input: "copyright"
 
 Output: true
 
+```
+const uniqueString = (str) => {
+  lcString = str.toLowerCase();
+  for (i = 0; i < str.length; i++) {
+    checkStr = str.substring(0, i) + str.substring((i + 1), str.length);
+    if (checkStr.includes(lcString.charAt(i))) {
+      return false
+    }
+  }
+  return true
+}
+```
+
 ## Question #5: Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
 
