@@ -75,3 +75,17 @@
 // };
 // console.log(compression("aaaabbbbcdefaccc"));
 
+// const compressionRecursive = (str) => {
+//   if (str === "") {
+//     return "";
+//   } else if(str.charAt(str.length-1) === str.charAt(str.length-2)) {
+//     let count = 1;
+//     for (i = 1; str.charAt(str.length - i) === str.charAt(str.length - (i + 1)); i++) {
+//       count++
+//     }
+//     return compressionRecursive(str.substring(0, str.length - count)) + count + str.charAt(str.length - 1);
+//   } else {
+//     return compressionRecursive(str.substring(0, str.length - 1)) + str.charAt(str.length - 1);
+//   }
+// }
+// console.log(compressionRecursive("aaaabbbbcdefaccc"));
