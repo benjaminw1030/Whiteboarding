@@ -23,6 +23,17 @@ const urlString = (string) => {
   return replacedArray.join("");
 };
 ```
+```
+const recursiveUrlString = (str) => {
+  if (str === "") {
+    return "";
+  } else if (str[str.length-1] === " ") {
+    return recursiveUrlString(str.substr(0, str.length - 1)) + "%20";
+  } else {
+    return recursiveUrlString(str.substr(0, str.length - 1)) + str[str.length - 1];
+  }
+}
+```
 
 ## Question #2: Array Deduping
 Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
