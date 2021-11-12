@@ -45,7 +45,7 @@ Output: [7, 9, "hi", 12, 53]
 ```
 const dedupe = (arr) => {
   const newArr = []
-  for (i = 0; i < arr.length - 1; i++) {
+  for (i = 0; i < arr.length; i++) {
     if (!newArr.includes(arr[i]) {
       newArr.push(arr[i])
     }
@@ -84,6 +84,27 @@ Example
 Input: "aaabccdddda"
 
 Output: "3ab2c4da"
+
+```
+const compression = (str) => {
+  const strArray = str.split("");
+  let newString = "";
+  for (let i = 0; i < strArray.length; i++) {
+    if (strArray[i] != strArray[i - 1]) {
+      let count = 1;
+      for (let j = i; strArray[j] === strArray[j + 1]; j++) {
+        count++;
+      }
+      if (count > 1) {
+        newString += count + strArray[i];
+      } else {
+        newString += strArray[i];
+      }
+    }
+  }
+  return newString;
+};
+```
 
 ## Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
