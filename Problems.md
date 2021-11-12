@@ -162,3 +162,27 @@ Example
 Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
+
+```
+const merge = (left, right) => {
+  let array = [];
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      array.push(left.shift());
+    } else {
+      array.push(right.shift());
+    }
+  }
+  return [...array, ...left, ...right];
+};
+
+const mergeSort = (arr) => {
+  const half = arr.length / 2;
+  if (arr.length < 2) {
+    return arr;
+  }
+  const left = arr.splice(0, half);
+  return merge(mergeSort(left), mergeSort(arr));
+};
+console.log(mergeSort([4, 2, 5, 7, 9, 9, 3]));
+```
