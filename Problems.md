@@ -63,6 +63,20 @@ const dedupeFilter = (arr) => {
 console.log(dedupeFilter([1, 2, 3, 2, 4, 5, 5, 6, 1]));
 ```
 
+```
+const dedupeRecursive = (arr) => {
+  if (arr.length === 0) {
+    return arr.concat([]);
+  }
+  const returnArr = arr.slice(0, -1);
+  if (returnArr.includes(arr[arr.length-1])) {
+    return dedupeRecursive(returnArr)
+  } else {
+    return dedupeRecursive(returnArr).concat(arr[arr.length-1])
+  }
+}
+```
+
 ## Question #3: Compressing Strings
 Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
 

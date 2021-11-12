@@ -41,3 +41,16 @@ const dedupeFilter = (arr) => {
   return newArr;
 }
 console.log(dedupeFilter([1, 2, 3, 2, 4, 5, 5, 6, 1]));
+
+const dedupeRecursive = (arr) => {
+  if (arr.length === 0) {
+    return arr.concat([]);
+  }
+  const returnArr = arr.slice(0, -1);
+  if (returnArr.includes(arr[arr.length-1])) {
+    return dedupeRecursive(returnArr)
+  } else {
+    return dedupeRecursive(returnArr).concat(arr[arr.length-1])
+  }
+}
+console.log(dedupeRecursive([1, 2, 3, 2, 4, 5, 5, 6, 1]));
