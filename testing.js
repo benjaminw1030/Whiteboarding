@@ -123,3 +123,4 @@ const mergeSort = (arr) => {
   return merge(mergeSort(left), mergeSort(arr));
 };
 console.log(mergeSort([4, 2, 5, 7, 9, 9, 3]));
+console.log(mergeSort(["a", "s", "b", "j"]));
