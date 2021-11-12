@@ -13,7 +13,7 @@ Output: "Jasmine%20Ann%20Jones"
 const urlString = (string) => {
   const stringArray = string.split("");
   const replacedArray = [];
-  stringArray.forEach((e) => {
+  stringArray.forEach(e => {
     if (e === " ") {
     replacedArray.push("%20");
     } else {
@@ -42,6 +42,20 @@ Example
 Input: [7, 9, "hi", 12, "hi" 7, 53]
 
 Output: [7, 9, "hi", 12, 53]
+```
+const dedupe = (arr) => {
+  const newArr = []
+  for (i = 0; i < arr.length - 1; i++) {
+    if (!newArr.includes(arr[i]) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}
+```
+```
+
+```
 
 ## Question #3: Compressing Strings
 Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
